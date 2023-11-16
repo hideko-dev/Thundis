@@ -18,7 +18,6 @@ client.on('ready', () => {
 });
 
 client.once('ready', async () => {
-
     console.log(`Logged in as ${client.user.tag}`);
 
     const guild = client.guilds.cache.get("1173269460820430878");
@@ -26,7 +25,6 @@ client.once('ready', async () => {
         console.log('Server not found');
         return;
     }
-
     app.get('/api/:userId', async (req, res) => {
         const userId = req.params.userId;
 
@@ -76,13 +74,10 @@ client.once('ready', async () => {
                     },
                     conditions: conditions,
                 });
-                const channel = client.channels.cache.get(debugChannelId);
-                channel.send("~~------------------------------------------~~\n" + "**A new API has been acquired.**" + "\n" + "IP: " + req.ip + "\n~~------------------------------------------~~")
             } else {
                 res.status(404).json({ error: 'User not found' });
             }
         } catch (error) {
-            console.error(error);
             res.status(500).json({ error: 'Internal Server Error' });
         }
     });
