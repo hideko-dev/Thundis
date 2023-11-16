@@ -5,16 +5,19 @@ const { client } = require('./client');
 
 app.use(express.json());
 
+client.login(botToken).then(() => {
+    console.log("Bot has launched.")
+})
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
-client.login(botToken);
 client.once('ready', async () => {
 
     console.log(`Logged in as ${client.user.tag}`);
 
-    const guild = client.guilds.cache.get(serverId);
+    const guild = client.guilds.cache.get("1173269460820430878");
     if (!guild) {
         console.log('Server not found');
         return;

@@ -1,5 +1,4 @@
-const path = require('path');
-require('dotenv')
+require('dotenv').config()
 
 const botToken = process.env.BOT_TOKEN;
 const serverId = process.env.SERVER_ID;
