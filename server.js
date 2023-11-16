@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const { botToken, serverId, portNumber, debugChannelId } = require('./environment');
 const { client } = require('./client');
 
-app.use(express.json());
+app.use(
+    express.json(),
+    cors()
+);
 
 client.login(botToken).then(() => {
     console.log("Bot has launched.")
