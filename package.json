@@ -1,0 +1,21 @@
+{
+  "name": "thundis",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/Hideko-Dev",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Hideko",
+  "license": "CC",
+  "dependencies": {
+    "console-log-colors": "^0.4.0",
+    "cors": "^2.8.5",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
