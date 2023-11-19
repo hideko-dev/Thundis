@@ -1,0 +1,106 @@
+.top {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.logo img {
+    margin: 0 auto;
+    width: 10rem;
+    height: 7.5rem;
+}
+
+.left {
+    text-align: left;
+}
+.left .title {
+    font-size: 60px;
+    line-height: 4.5rem;
+    width: max-content;
+    background: linear-gradient(to right, rgb(88, 101, 242) ,rgb(64, 78, 237));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.left .subtitle {
+    font-size: 60px;
+    width: 40rem;
+    line-height: 3.8rem;
+}
+.left .bio {
+    margin-top: 1rem;
+    font-size: 20px;
+    width: 70%;
+    line-height: 1.8rem;
+    opacity: 0.7;
+}
+
+.btns {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background: linear-gradient(to right, rgb(88, 101, 242) ,rgb(64, 78, 237));
+    padding-inline: 1rem;
+    padding-block: 5px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: white;
+}
+.btn:hover {
+    opacity: 0.7;
+}
+.logoimg {
+    display: none;
+}
+@media (max-width: 800px) {
+    .left .title {
+        font-size: 50px;
+    }
+    .left .subtitle {
+        font-size: 40px;
+        width: 30rem;
+        line-height: 3rem;
+    }
+    .left .bio {
+        font-size: 18px;
+        width: 25rem;
+    }
+}
+@media (max-width: 600px) {
+    .logoimg {
+        width: 9rem;
+        height: 7rem;
+        margin: 0 auto;
+        display: flex;
+    }
+    .left {
+        text-align: center;
+    }
+    .left .title {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 50px;
+    }
+    .left .subtitle {
+        font-size: 30px;
+        width: 20rem;
+        line-height: 2.5rem;
+    }
+    .left .bio {
+        font-size: 18px;
+        width: 20rem;
+        margin-top: 0.5rem;
+    }
+    .btns {
+        justify-content: center;
+    }
+}

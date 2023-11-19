@@ -1,0 +1,26 @@
+{
+  "name": "exr-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 1000",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Hideko, yukieiji",
+  "license": "CC4-BY",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@next/font": "^14.0.3",
+    "next": "^14.0.3",
+    "next-seo": "^6.1.0",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

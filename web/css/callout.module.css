@@ -1,0 +1,41 @@
+.box {
+    border-radius: 4px;
+    padding: 0.5rem;
+    width: max-content;
+    min-width: 5.5rem;
+    max-width: 100%;
+    margin-block: 5px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+.title p {
+    margin-left: 5px;
+}
+.warning {
+    border-left: 2px solid #f77e7e;
+    background: rgba(247, 126, 126, 0.15);
+}
+.important {
+    border-left: 2px solid #2c84fa;
+    background: rgba(44, 132, 250, 0.15);
+}
+.note {
+    border-left: 2px solid #7253ed;
+    background: rgba(114, 83, 237, 0.15);
+}
+.warningtitle {
+    color: #f77e7e;
+}
+.importanttitle {
+    color: #2c84fa;
+}
+.notetitle {
+    color: #7253ed;
+}
+.texts {
+    padding-block: 0.3rem;
+    padding-inline: 0.5rem;
+}
