@@ -27,14 +27,21 @@ client.once('ready', async () => {
     }
 
     app.get('/', async (req, res) => {
-        // res.redirect("https://thundis.hideko.cf")
-        res.send("Are you killing me?")
+        res.redirect("https://thundis.hideko.cf")
     })
 
-    app.get('/api/:userId', async (req, res) => {
-        const user = req.params.userId;
+    app.get('/id/:userId', async (req, res) => {
+        const userTag = req.params.userId
+        const user = await guild.members.fetch(userTag)
         await useGets(res, req, guild, user)
-    })
+    });
+
+    app.get('/tag/:userTag', async (req, res) => {
+        const userTag = req.params.userTag
+        const userinfo = client.users.cache.find(user => user.tag === userTag)
+        const user = await guild.members.fetch(userinfo.id)
+        await useGets(res, req, guild, user)
+    });
 
     const server = app.listen(portNumber, () => {
         useLog.log(`server on port ${portNumber}`)

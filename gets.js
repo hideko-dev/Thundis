@@ -1,6 +1,6 @@
 const useGets = async (res, req, guild, user) => {
     try {
-        const member = await guild.members.fetch(user)
+        const member = user
         if (member) {
             const pres = await member.presence;
             const user = pres.user;

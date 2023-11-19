@@ -1,0 +1,11 @@
+{
+  "general": {
+    "title": "General"
+  },
+  "javascript": {
+    "title": "JavaScript"
+  },
+  "test": {
+    "title": "Test"
+  }
+}

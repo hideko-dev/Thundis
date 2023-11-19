@@ -1,0 +1,61 @@
+import { Callout } from "nextra/components";
+
+# General usage
+
+This is a simple and commonly used method of retrieving data by sending parameters and a request to a URL.
+There are two ways to use this API: using user id or using user tag.
+
+```text filename="When using id"
+https://thundis.vercel.app/id/XXXXXXXXXXXXXXXXXX
+```
+
+```text filename="When using tag"
+https://thundis.vercel.app/tag/XXXXXXXXXXXXXXXXXX
+```
+
+<Callout type="info">Substitute your Discord account ID after the /id or tag/ and send your request.</Callout>
+
+The data below is as retrieved from the developer; the URL is one below.
+
+```text filename="for id"
+https://thundis.vercel.app/api/1103253246807650344
+```
+
+```text filename="for id"
+https://thundis.vercel.app/tag/hideko4360
+```
+
+```json filename="Doing so will return the following json data as a response."
+{
+    "id": "1103253246807650344",
+    "status": "idle",
+    "tag": "hideko4360",
+    "created_at": "2023-05-03T09:34:31.493Z",
+    "created_timestamp": 1683106471493,
+    "discriminator": "0",
+    "bot": false,
+    "activities": null,
+    "public_flags": 256,
+    "avatars": {
+        "id": "f5efb4968e8b0c7fa63a6d5a7ba834e5",
+        "url": "https://cdn.discordapp.com/avatars/1103253246807650344/f5efb4968e8b0c7fa63a6d5a7ba834e5.webp",
+        "default": "https://cdn.discordapp.com/embed/avatars/5.png"
+    },
+    "names": {
+        "name": "hideko4360",
+        "global": "Hideko",
+        "display": "Hideko"
+    },
+    "banners": {},
+    "conditions": {
+        "web": "idle",
+        "desktop": "offline",
+        "mobile": "offline"
+    },
+    "api_status": "success"
+}
+```
+
+<Callout type="warning">
+    In the case of statuses that can be retrieved by special operations such as activities and banner, if they are empty, they will be retrieved as null or empty.
+</Callout>

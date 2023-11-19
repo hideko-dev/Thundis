@@ -1,0 +1,48 @@
+# JavaScript usage
+
+All details and instructions on how to make a request can be found in [General](general). Please read it if you have not seen it.
+
+The following code is an example code for retrieving data using JavaScript's fetch.
+```js filename="app.js"
+fetch('https://thundis.vercel.app/.....')
+```
+
+However, in this state, it is not asynchronous. In this case, `async/await` is used.
+```js filename="app.js"
+async function getData(){
+    await fetch('https://thundis.vercel.app/.....')
+}
+```
+
+Even in this state, it does not return as json. So the code to return as json and put out in console.log is this.
+```js filename="app.js"
+async function getData(){
+    const response = await fetch('https://thundis.vercel.app/.....')
+    const result = response.json()
+    console.log(result)
+}
+```
+
+If you want to use the acquired data as a whole, here is the code
+```js filename="app.js"
+let result
+
+async function getData(){
+    const response = await fetch('https://thundis.vercel.app/.....')
+    result = response.json()
+}
+```
+
+Even if it is asynchronous, there is a short pause to retrieve the data. Therefore, you can check if the data has been retrieved by doing the following. If the data could not be retrieved, an error message is sent to the console.
+```js filename="app.js"
+let result
+
+async function getData(){
+    try {
+        const response = await fetch('https://thundis.vercel.app/.....')
+        result = response.json()
+    } catch (error) {
+        console.log(error)
+    }
+}
+```
