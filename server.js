@@ -27,7 +27,8 @@ client.once('ready', async () => {
     }
 
     app.get('/', async (req, res) => {
-        res.redirect("https://thundis.hideko.cf")
+        // res.redirect("https://thundis.hideko.cf")
+        res.send("Are you killing me?")
     })
 
     app.get('/api/:userId', async (req, res) => {
